@@ -1,0 +1,78 @@
+@layout.app({ title: 'Seller Add Product', bodyClass: 'page-seller-add-product' })
+
+  @slot('main')
+    <header class="catalog-header">
+      <h1 class="primary-text">
+        Add New Product
+      </h1>
+      <p>
+        Fill out the form to add a new kit to your store.
+      </p>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <div class="checkout-form-container" style="max-width: 800px; margin: auto">
+          <form class="checkout-form">
+            <h3>
+              Product Details
+            </h3>
+            <div class="form-group">
+              <label for="name">Product Name</label>
+              <input type="text" id="name" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label for="desc">Product Description</label>
+              <textarea id="desc" class="form-input" required rows="4"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="price">Price (IDR)</label>
+                <input type="number" id="price" class="form-input" placeholder="e.g., 7000" required />
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" class="form-input" required>
+                  <option value="">
+                    Select a category
+                  </option>
+                  <option value="pins">
+                    Pins
+                  </option>
+                  <option value="charms">
+                    Charms
+                  </option>
+                  <option value="keychains">
+                    Keychains
+                  </option>
+                  <option value="other">
+                    Other
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="image">Product Image</label>
+              <input type="file" id="image" class="form-input" accept="image/*" />
+            </div>
+            <button
+              type="submit"
+              class="header-shop-button"
+              style="
+                width: 100%;
+                margin-top: 20px;
+                box-sizing: border-box;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+              "
+            >
+              Add Product to Store
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+  @endslot
+@end

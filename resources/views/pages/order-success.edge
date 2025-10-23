@@ -1,0 +1,16 @@
+@layout.app({ title: 'Order Success', bodyClass: 'page-order-success' })
+
+  @slot('main')
+    <header class="catalog-header">
+      <i class="fi fi-rr-badge-check" style="font-size: 60px; color: #68B984; margin-bottom: 10px;"></i>
+      <h1 class="primary-text">
+        Thank You For Your Order!
+      </h1>
+      <p>
+        Your order has been placed successfully. You'll receive a confirmation email shortly.
+      </p>
+      <a href="/catalog" class="header-shop-button" style="margin-top: 20px;">Continue Shopping</a>
+    </header>
+
+  @endslot
+@end

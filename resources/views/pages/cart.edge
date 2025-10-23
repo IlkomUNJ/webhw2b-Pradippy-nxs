@@ -1,0 +1,53 @@
+@layout.app({ title: 'Your Cart', bodyClass: 'page-cart' })
+
+  @slot('main')
+    <header class="catalog-header">
+      <h1 class="primary-text">
+        Shopping Cart
+      </h1>
+      <p>
+        Review your items and proceed to checkout.
+      </p>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <div class="cart-layout">
+          <div class="cart-items">
+          </div>
+
+          <div class="cart-summary" data-shipping-cost="5000">
+            <h3>
+              Order Summary
+            </h3>
+            <div class="summary-row">
+              <p>
+                Subtotal
+              </p>
+              <p>
+                Rp 0
+              </p>
+            </div>
+            <div class="summary-row">
+              <p>
+                Shipping
+              </p>
+              <p>
+                Rp 5.000
+              </p>
+            </div>
+            <div class="summary-row total-row">
+              <p>
+                Total
+              </p>
+              <p>
+                Rp 5.000
+              </p>
+            </div>
+            <a href="/checkout" class="header-shop-button" style="width: 80%; margin: auto">Proceed to Checkout</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  @endslot
+@end

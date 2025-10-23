@@ -1,0 +1,225 @@
+@layout.app({ title: 'Your Catalog', bodyClass: 'page-catalog' })
+
+  @slot('main')
+    <header class="catalog-header">
+      <h1 class="primary-text">
+        Our Craft Kits
+      </h1>
+      <p>
+        Find your next creative adventure! All kits are designed to be fun for
+        everyone.
+      </p>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <section class="catalog-controls">
+          <div class="search-bar">
+            <input type="text" placeholder="Search for kits..." id="search-input" />
+            <button>              <i class="fi fi-rr-search"></i></button>
+          </div>
+          <div class="filter-buttons" id="filter-container">
+            <a href="#" class="filter-active" data-category="All">All</a>
+            <a href="#" data-category="Pins">Pins</a>
+            <a href="#" data-category="Charms">Charms</a>
+            <a href="#" data-category="Keychains">Keychains</a>
+            <a href="#" data-category="Other">Other</a>
+          </div>
+        </section>
+
+        <section class="product-container">
+          <div
+            class="main-product-card"
+            data-id="p1"
+            data-price="7000"
+            data-image-src="image/pin.png"
+            data-category="pins"
+          >
+            <img src="image/pin.png" alt="Bottle Cap Pin Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Bottle Cap Pin Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p2"
+            data-price="7000"
+            data-image-src="image/mirror.png"
+            data-category="charms"
+          >
+            <img src="image/mirror.png" alt="Mirror Charm Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Mirror Charm Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p3"
+            data-price="7000"
+            data-image-src="image/cherry.png"
+            data-category="charms"
+          >
+            <img src="image/cherry.png" alt="Baby Cherry Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Baby Cherry Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p4"
+            data-price="8000"
+            data-image-src="image/keychain.png"
+            data-category="keychains"
+          >
+            <img src="image/keychain.png" alt="Plastic Keychain Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Plastic Keychain Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 8.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p5"
+            data-price="12000"
+            data-image-src="image/cake.png"
+            data-category="other"
+          >
+            <img src="image/cake.png" alt="Clay Cake Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Clay Cake Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 12.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p6"
+            data-price="10000"
+            data-image-src="image/cactus.png"
+            data-category="other"
+          >
+            <img src="image/cactus.png" alt="Mini Cactus Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Mini Cactus Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 10.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p7"
+            data-price="9000"
+            data-image-src="image/teabag.png"
+            data-category="other"
+          >
+            <img src="image/teabag.png" alt="Tea Bag Holder Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Tea Bag Holder Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 9.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p8"
+            data-price="7000"
+            data-image-src="image/mirror.png"
+            data-category="charms"
+          >
+            <img src="image/mirror.png" alt="Flower Mirror Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Flower Mirror Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div
+            class="main-product-card"
+            data-id="p9"
+            data-price="7000"
+            data-image-src="image/pin.png"
+            data-category="pins"
+          >
+            <img src="image/pin.png" alt="Smiley Pin Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Smiley Pin Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+        </section>
+
+        <div id="no-results-message" style="display: none; text-align: center; padding: 20px 0;">
+          <p>
+            No products found matching your criteria.
+          </p>
+        </div>
+
+        <section class="load-more-container">
+          <a href="#" class="load-more-button" onclick="event.preventDefault(); handleLoadMore()">Load More</a>
+        </section>
+      </section>
+    </main>
+  @endslot
+@end
+

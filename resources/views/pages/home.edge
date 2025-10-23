@@ -1,0 +1,136 @@
+@layout.app({ title: 'Your Home', bodyClass: 'page-home' })
+
+  @slot('main')
+    <header>
+      <section class="header-container">
+        <section class="header-text">
+          <h1 class="primary-text">
+            Make It. Love It.
+          </h1>
+          <h1 class="secondary-text">
+            Wear It.
+          </h1>
+          <p>
+            Discover our collection of easy-to-follow DIY kits. Every box turns
+            hours of fun into a wonderful, wearable creation. Transforming waste
+            into wonders!
+          </p>
+          <a href="/catalog" class="header-shop-button">Shop Now!</a>
+        </section>
+        <section class="header-image-container">
+          <img src="image/cactus.png" alt="Mini cactus craft" class="header-image" />          <img src="image/cake.png" alt="Clay cake craft" class="header-image" />          <img src="image/cherry.png" alt="Cherry charm craft" class="header-image" />          <img src="image/keychain.png" alt="Keychain craft" class="header-image" />          <img src="image/mirror.png" alt="Mirror charm craft" class="header-image" />          <img src="image/pin.png" alt="Bottle cap pin craft" class="header-image" />          <img src="image/teabag.png" alt="Tea bag holder craft" class="header-image" />          <img src="image/cactus.png" alt="Mini cactus craft" class="header-image" />          <img src="image/cake.png" alt="Clay cake craft" class="header-image" />
+        </section>
+      </section>
+    </header>
+    <main>
+      <section class="main-container">
+        <section class="main-header">
+          <h1>
+            Featured!
+          </h1>
+          <p>
+            Our current best-selling kits, ready for you to create!
+          </p>
+          <a href="/catalog" class="view-all-button">View All Kits</a>
+        </section>
+        <section class="main-featured">
+          <div class="main-product-card" data-id="p1" data-price="7000" data-image-src="image/pin.png">
+            <img src="image/pin.png" alt="Bottle Cap Pin Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Bottle Cap Pin Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div class="main-product-card" data-id="p2" data-price="7000" data-image-src="image/mirror.png">
+            <img src="image/mirror.png" alt="Mirror Charm Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Mirror Charm Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+
+          <div class="main-product-card" data-id="p3" data-price="7000" data-image-src="image/cherry.png">
+            <img src="image/cherry.png" alt="Baby Cherry Kit" class="main-product-card-image" />
+            <a href="#" class="wishlist-button" onclick="handleAddToWishlist(event, this)">              <i class="fi fi-rr-heart"></i></a>
+            <p class="main-product-card-title">
+              Baby Cherry Kit
+            </p>
+            <div>
+              <p class="main-product-card-price">
+                Rp 7.000
+              </p>
+              <a href="#" onclick="handleAddToCart(event, this)" class="main-product-card-add-button">+</a>
+            </div>
+          </div>
+        </section>
+        <section class="main-benefits">
+          <div class="main-benefits-card">
+            <i class="fi fi-rr-play-circle benefits-icon"></i>
+            <h1 class="secondary-text">
+              Step-by-Step Video
+            </h1>
+            <p>
+              Every kit includes a full, easy-to-follow video tutorial for all
+              skill levels.
+            </p>
+          </div>
+          <div class="main-benefits-card">
+            <i class="fi fi-rr-gem benefits-icon"></i>
+            <h1 class="secondary-text">
+              High Quality Materials
+            </h1>
+            <p>
+              We source only the best materials to ensure your final craft is
+              beautiful and durable.
+            </p>
+          </div>
+          <div class="main-benefits-card">
+            <i class="fi fi-rr-leaf benefits-icon"></i>
+            <h1 class="secondary-text">
+              Sustainable Crafting
+            </h1>
+            <p>
+              Committed to low waste and mindful sourcing in every kit we
+              design.
+            </p>
+          </div>
+        </section>
+        <section class="main-sign-up">
+          <div class="main-sign-up-card">
+            <h1>
+              Join the Crafting Circle!
+            </h1>
+            <p>
+              Join our community and get 10% off your first order and exclusive
+              access to new kit releases!
+            </p>
+            <form action="#">
+              <input
+                type="email"
+                placeholder="Enter your email address..."
+                class="main-sign-up-form"
+                id="signup-email"
+              />
+            </form>
+            <a href="#" class="main-sign-up-button" onclick="event.preventDefault(); handleSignUp()">Sign Up!</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  @endslot
+  
+@end
+

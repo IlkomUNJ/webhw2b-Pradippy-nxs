@@ -1,0 +1,113 @@
+@layout.app({ title: 'Seller Dashboard', bodyClass: 'page-seller-dashboard' })
+
+  @slot('main')
+    <header class="catalog-header">
+      <h1 class="primary-text">
+        Seller Dashboard
+      </h1>
+      <p>
+        Manage your products and view store performance.
+      </p>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <a href="/seller-add-product" class="header-shop-button" style="width: auto; margin-bottom: 30px">+ Add New Product</a>
+
+        <div class="cart-items">
+          <div class="cart-item">
+            <div class="cart-item-details">
+              <img
+                src="image/pin.png"
+                alt="Bottle Cap Pin Kit"
+                class="main-product-card-image"
+                style="
+                  height: 60px;
+                  width: 60px;
+                  border-style: solid;
+                  margin: 0;
+                "
+              />
+              <div>
+                <p class="main-product-card-title" style="margin: 0">
+                  Bottle Cap Pin Kit
+                </p>
+                <p class="main-product-card-price" style="margin: 0; text-align: left">
+                  Rp 7.000
+                </p>
+              </div>
+            </div>
+            <div class="cart-item-controls">
+              <div style="text-align: right; margin-right: 20px">
+                <p style="margin: 0; font-weight: bold">
+                  Wishlisted: <span class="primary-text">12</span>
+                </p>
+                <p style="margin: 0; font-weight: bold">
+                  Total Sales: <span class="secondary-text">30</span>
+                </p>
+              </div>
+              <a
+                href="#"
+                class="view-all-button"
+                style="margin: 0; padding: 10px 15px"
+                onclick="event.preventDefault(); alert('Redirecting to Edit page... (Demo)')"
+              >Edit</a>
+              <a
+                href="#"
+                class="load-more-button"
+                style="margin: 0; padding: 10px 15px"
+                onclick="handleDelete(event, this)"
+              >Delete</a>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item-details">
+              <img
+                src="image/mirror.png"
+                alt="Mirror Charm Kit"
+                class="main-product-card-image"
+                style="
+                  height: 60px;
+                  width: 60px;
+                  border-style: solid;
+                  margin: 0;
+                "
+              />
+              <div>
+                <p class="main-product-card-title" style="margin: 0">
+                  Mirror Charm Kit
+                </p>
+                <p class="main-product-card-price" style="margin: 0; text-align: left">
+                  Rp 7.000
+                </p>
+              </div>
+            </div>
+            <div class="cart-item-controls">
+              <div style="text-align: right; margin-right: 20px">
+                <p style="margin: 0; font-weight: bold">
+                  Wishlisted: <span class="primary-text">8</span>
+                </p>
+                <p style="margin: 0; font-weight: bold">
+                  Total Sales: <span class="secondary-text">22</span>
+                </p>
+              </div>
+              <a
+                href="#"
+                class="view-all-button"
+                style="margin: 0; padding: 10px 15px"
+                onclick="event.preventDefault(); alert('Redirecting to Edit page... (Demo)')"
+              >Edit</a>
+              <a
+                href="#"
+                class="load-more-button"
+                style="margin: 0; padding: 10px 15px"
+                onclick="handleDelete(event, this)"
+              >Delete</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  @endslot
+@end

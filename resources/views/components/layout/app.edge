@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-CON-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Craftcycle - {{ title || 'Home' }}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Outfit:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    @vite(['resources/js/app.js'])
+
+  </head>
+  <body class="{{ bodyClass || '' }}">
+    <nav>
+      <section class="nav-container">
+        <h1 class="primary-text">CRAFTCYCLE</h1>
+        <a href="/" class="{{ request.url() === '/' ? 'active' : '' }}">Home</a>
+        <a href="/catalog" class="{{ request.url() === '/catalog' ? 'active' : '' }}">Catalog</a>
+        <a href="/seller-dashboard" class="{{ request.url().startsWith('/seller-') ? 'active' : '' }}">Seller</a>
+        <a href="/wishlist" class="{{ request.url() === '/wishlist' ? 'active' : '' }}"><i class="fi fi-rr-heart"></i></a>
+        <a href="/cart" class="{{ request.url() === '/cart' ? 'active' : '' }}"><i class="fi fi-rr-shopping-cart"></i></a>
+      </section>
+    </nav>
+
+    {{{ await $slots.main() }}}
+
+    <footer>
+      <section class="footer-container">
+        <h1 class="primary-text">CRAFTCYCLE</h1>
+        <p class="footer-slogan">Transforming waste into wonders.</p>
+        <div class="footer-icons">
+          <a href="#"><i class="fi fi-rr-comment-alt"></i></a>
+          <a href="#"><i class="fi fi-rr-envelope"></i></a>
+          <a href="#"><i class="fi fi-rr-paper-plane"></i></a>
+        </div>
+        <p class="footer-copyright-text">
+          &copy; 2025 Craft Cycle. All Rights Reserved.
+        </p>
+      </section>
+    </footer>
+
+  </body>
+</html>

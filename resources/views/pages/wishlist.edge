@@ -1,0 +1,25 @@
+@layout.app({ title: 'Your Wishlist', bodyClass: 'page-wishlist' })
+
+  @slot('main')
+
+    <header class="catalog-header">
+      <h1 class="primary-text">
+        Your Wishlist
+      </h1>
+      <p>
+        All your saved craft kits, all in one place.
+      </p>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <div class="cart-layout" style="display: block; width: 100%">
+          <div class="cart-items" style="flex: none; width: 100%; max-width: 900px; margin: auto">
+          </div>
+        </div>
+      </section>
+    </main>
+
+  @endslot
+@end
+
